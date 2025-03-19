@@ -1,7 +1,6 @@
-package com.personfinance.adapter.input.rest;
+package com.personfinance.modules.user.adapter.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,42 +13,45 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.personfinance.domain.model.User;
-import com.personfinance.domain.port.input.UserUseCase;
+import com.personfinance.modules.user.adapter.IUserController;
+import com.personfinance.modules.user.application.port.IUserService;
+import com.personfinance.modules.user.domain.model.User;
+
 
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin(origins = "*")
-public class UserController {
-    private final UserUseCase userUseCase;
+public class UserController implements IUserController{
 
-    public UserController(UserUseCase userUseCase) {
-        this.userUseCase = userUseCase;
+    private final IUserService userService;
+
+    public UserController(IUserService userService) {
+        this.userService = userService;
     }
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
-        return ResponseEntity.ok(userUseCase.createUser(user));
+        return ResponseEntity.ok(userService.createUser(user));
     }
 
     @PutMapping
     public ResponseEntity<User> updateUser(@RequestBody User user) {
-        return ResponseEntity.ok(userUseCase.updateUser(user));
+        return ResponseEntity.ok(userService.updateUser(user));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-        userUseCase.deleteUser(id);
+        userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
-        return ResponseEntity.ok(userUseCase.findById(id));
+        return ResponseEntity.ok(userService.findById(id));
     }
 
     @GetMapping
     public ResponseEntity<List<User>> findAll() {
-        return ResponseEntity.ok(userUseCase.findAll());
+        return ResponseEntity.ok(userService.findAll());
     }
 }

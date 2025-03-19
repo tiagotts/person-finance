@@ -1,13 +1,14 @@
-package com.personfinance.adapter.output.persistence;
+package com.personfinance.modules.user.infrastructure.persistence.repository.implementation;
 
-import com.personfinance.domain.model.User;
-import com.personfinance.domain.port.output.UserRepository;
-import com.personfinance.infrastructure.persistence.entity.UserEntity;
-import com.personfinance.infrastructure.persistence.repository.UserJpaRepository;
-import com.personfinance.infrastructure.mapper.UserMapper;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Repository;
+
+import com.personfinance.modules.user.domain.model.User;
+import com.personfinance.modules.user.infrastructure.UserJpaRepository;
+import com.personfinance.modules.user.infrastructure.mapper.UserMapper;
+import com.personfinance.modules.user.infrastructure.persistence.entity.UserEntity;
+import com.personfinance.modules.user.infrastructure.persistence.repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.personfinance.domain.model;
+package com.personfinance.modules.user.domain.model;
 
 
 public class User {

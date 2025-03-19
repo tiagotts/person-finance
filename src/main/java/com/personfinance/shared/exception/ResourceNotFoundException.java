@@ -1,4 +1,4 @@
-package com.personfinance.domain.exception;
+package com.personfinance.shared.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
     

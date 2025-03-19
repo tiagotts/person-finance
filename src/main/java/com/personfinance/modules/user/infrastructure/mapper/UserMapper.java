@@ -1,10 +1,11 @@
-package com.personfinance.infrastructure.mapper;
+package com.personfinance.modules.user.infrastructure.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-import com.personfinance.domain.model.User;
-import com.personfinance.infrastructure.persistence.entity.UserEntity;
+import com.personfinance.modules.user.domain.model.User;
+import com.personfinance.modules.user.infrastructure.persistence.entity.UserEntity;
+
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {

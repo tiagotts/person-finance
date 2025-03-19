@@ -1,10 +1,11 @@
-package com.personfinance.domain.port.input;
+package com.personfinance.modules.user.application.port;
 
 import java.util.List;
 
-import com.personfinance.domain.model.User;
+import com.personfinance.modules.user.domain.model.User;
 
-public interface UserUseCase {
+
+public interface IUserService {
     User createUser(User user);
     User updateUser(User user);
     void deleteUser(Long id);
