@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = "com.personfinance")
-@EntityScan("com.personfinance.modules.user.infrastructure.persistence.entity")
+@EntityScan("com.personfinance.modules.user.domain.entity")
 @EnableJpaRepositories("com.personfinance.modules.user.infrastructure")
 public class PersonFinanceApplication {
 

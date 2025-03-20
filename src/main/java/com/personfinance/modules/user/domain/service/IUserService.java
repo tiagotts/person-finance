@@ -1,4 +1,4 @@
-package com.personfinance.modules.user.application.port;
+package com.personfinance.modules.user.domain.service;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package com.personfinance.modules.user.infrastructure;
+package com.personfinance.modules.user.infrastructure.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.personfinance.modules.user.infrastructure.persistence.entity.UserEntity;
+import com.personfinance.modules.user.domain.entity.UserEntity;
 
 
 @Repository

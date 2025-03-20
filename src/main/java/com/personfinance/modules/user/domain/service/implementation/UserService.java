@@ -1,4 +1,4 @@
-package com.personfinance.modules.user.application.service;
+package com.personfinance.modules.user.domain.service.implementation;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.personfinance.modules.user.application.port.IUserService;
 import com.personfinance.modules.user.domain.model.User;
+import com.personfinance.modules.user.domain.service.IUserService;
 import com.personfinance.modules.user.infrastructure.persistence.repository.UserRepository;
 import com.personfinance.shared.exception.ResourceNotFoundException;
 

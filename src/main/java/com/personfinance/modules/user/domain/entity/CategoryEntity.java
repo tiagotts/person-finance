@@ -1,7 +1,5 @@
-package com.personfinance.modules.user.infrastructure.persistence.entity;
+package com.personfinance.modules.user.domain.entity;
 
-
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -13,16 +11,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
-@Table(name = "cards")
+@Table(name = "categories")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CardEntity {
+public class CategoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -34,14 +32,12 @@ public class CardEntity {
     @Column(nullable = false)
     private String name;
 
-    @Column(name = "limit")
-    private BigDecimal limit;
-    
-    @Column(name = "closingDay")
-    private Integer closingDay;
-    
+    @Column
+    private String description;
+
+    @Column(length = 7)
+    private String color;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
-
-
 }

@@ -3,8 +3,8 @@ package com.personfinance.modules.user.infrastructure.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+import com.personfinance.modules.user.domain.entity.UserEntity;
 import com.personfinance.modules.user.domain.model.User;
-import com.personfinance.modules.user.infrastructure.persistence.entity.UserEntity;
 
 
 @Mapper(componentModel = "spring")

@@ -1,4 +1,4 @@
-package com.personfinance.modules.user.adapter.controller;
+package com.personfinance.modules.user.application.controller;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.personfinance.modules.user.adapter.IUserController;
-import com.personfinance.modules.user.application.port.IUserService;
+import com.personfinance.modules.user.application.IUserController;
 import com.personfinance.modules.user.domain.model.User;
+import com.personfinance.modules.user.domain.service.IUserService;
 
 
 @RestController
