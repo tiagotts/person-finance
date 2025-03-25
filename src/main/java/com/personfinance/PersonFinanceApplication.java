@@ -2,12 +2,12 @@ package com.personfinance;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = "com.personfinance")
-@EntityScan("com.personfinance.modules.user.domain.entity")
-@EnableJpaRepositories("com.personfinance.modules.user.infrastructure")
+@ComponentScan("com.personfinance.infrastructure")
+@EnableJpaRepositories("com.personfinance.modules.user.adaters.output.persistence")
 public class PersonFinanceApplication {
 
     public static void main(String[] args) {
